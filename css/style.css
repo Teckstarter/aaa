@@ -134,7 +134,7 @@ header {
 }
 
 .divider {
-    height: 2px;
+    height: 1.3px;
     background-color: rgb(163, 161, 161);
     margin: 10px auto;
     width: 84%; /* Задайте желаемую ширину в процентах */
@@ -150,12 +150,12 @@ header {
     display: flex; /* Flex-контейнер для кнопки */
     align-items: center; /* Вертикальное выравнивание элементов по центру */
     justify-content: center; /* Горизонтальное выравнивание элементов по центру */
-    background-color: rgba(117, 203, 231, 0.8); /* Цвет фона */
-    color: black; /* Цвет текста */
-    border: 2px solid blue; /* Рамка вокруг кнопки */
-    border-radius: 5px; /* Округление углов (уберите, если хотите прямые углы) */
+    background-color: rgb(19, 96, 189); /* Цвет фона */
+    color: rgb(255, 255, 255); /* Цвет текста */
+    border: 1px solid rgb(255, 255, 255); /* Рамка вокруг кнопки */
+    border-radius: 10px; /* Округление углов (уберите, если хотите прямые углы) */
     padding: 10px 20px; /* Внутренние отступы */
-    width: 300px; /* Фиксированная ширина кнопки */
+    width: 350px; /* Фиксированная ширина кнопки */
     height: 48px; /* Фиксированная высота кнопки */
     text-align: center; /* Текст по центру */
     cursor: pointer; /* Курсор указателя при наведении */
@@ -163,7 +163,7 @@ header {
 }
 
 .login-button:hover {
-    background-color: rgb(25, 208, 221); /* Темнее при наведении */
+    background-color: rgb(19, 96, 189); /* Темнее при наведении */
 }
 
 /* Теперь добавляем стили для текста в main */
@@ -171,11 +171,11 @@ main {
     display: flex; /* Используем flex для центрирования содержимого */
     flex-direction: column;
     align-items: center; /* Центрируем содержимое по горизонтали */
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 main h2 {
-    color: blue;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
@@ -189,11 +189,19 @@ main p {
 /* Стили для рамки */
 .frame {
     margin: 20px; /* Отступы вокруг рамки */
-    border: 2px solid #007BFF; /* Цвет рамки */
+    width: 80%; /* Ширина рамки в процентах */
+    border: 2px solid #7c8186; /* Цвет рамки */
     padding: 20px; /* Отступы внутри рамки */
     border-radius: 10px; /* Скругление углов рамки */
     background-color: rgba(173, 216, 230, 1); /* Цвет фона рамки */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень под рамкой */
+}
+
+.frame img {
+    width: 100%; /* Изображение займет всю ширину рамки */
+    height: auto; /* Высота будет определяться автоматически для сохранения пропорций */
+    border-radius: 10px; /* Скругление углов изображения, чтобы совпадало с рамкой */
+    margin-bottom: 10px; /* Отступ снизу для отделения изображения от текста */
 }
 
 /* Стили для темной темы */
@@ -231,5 +239,4 @@ body.dark-theme .frame {
     border-radius: 50%; /* Для круглой формы */
     object-fit: cover; /* Обеспечивает правильное обрезание изображения */
 }
-
 
