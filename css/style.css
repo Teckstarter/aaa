@@ -1,0 +1,231 @@
+body {
+    background-color: rgba(214, 231, 235, 0.5); /* Слабый голубой с прозрачностью */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Добавим плавный переход */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('http://192.168.1.173:5500/fonts/ethnocentric.woff2') format('woff2'),
+         url('http://192.168.1.173:5500/fonts/ethnocentric.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    flex-grow: 1;
+    font-size: 25px;
+    font-family: 'Ethnocentric', sans-serif;
+   
+}
+
+
+.underline {
+    width: 100vw;
+    height: 3px;
+    background-color: rgb(2, 2, 5);
+    margin-top: 4px;
+    box-shadow: 0 0 px blue;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: relative;
+    width: 35px;
+    height: 30px;
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.line:nth-child(1) {
+    top: 0;
+}
+
+.line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line:nth-child(3) {
+    bottom: 0;
+}
+
+/* Стили для анимации иконки меню */
+.line.hide {
+    opacity: 0;
+}
+
+.line.move-up {
+    transform: rotate(-45deg) translate(2px, 2px);
+}
+
+.line.move-down {
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+.line.rotate {
+    transform: rotate(135deg) translateY(10px) translateX(-8px);
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(173, 216, 230, 1);
+    box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Скругление углов */
+    z-index: 1000;
+    width: 100vw; /* Меню теперь занимает всю ширину экрана */
+    height: 100vh; /* Меню будет занимать всю высоту экрана */
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100vw; /* Кнопка теперь занимает всю ширину экрана */
+    font-size: 18px; /* Увеличьте значение, чтобы изменить размер шрифта */
+    transition: background-color 0.3s ease; /* Плавный переход для фона кнопки */
+}
+
+.menu-item i {
+    margin-right: 10px;
+    color: blue;
+    flex-shrink: 0;
+}
+
+.menu-item span {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.divider {
+    height: 3px;
+    background-color: blue;
+    margin: 10px 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login-button {
+    display: flex; /* Flex-контейнер для кнопки */
+    align-items: center; /* Вертикальное выравнивание элементов по центру */
+    justify-content: center; /* Горизонтальное выравнивание элементов по центру */
+    background-color: rgba(117, 203, 231, 0.8); /* Цвет фона */
+    color: black; /* Цвет текста */
+    border: 2px solid blue; /* Рамка вокруг кнопки */
+    border-radius: 5px; /* Округление углов (уберите, если хотите прямые углы) */
+    padding: 10px 20px; /* Внутренние отступы */
+    width: 300px; /* Фиксированная ширина кнопки */
+    height: 48px; /* Фиксированная высота кнопки */
+    text-align: center; /* Текст по центру */
+    cursor: pointer; /* Курсор указателя при наведении */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+}
+
+.login-button:hover {
+    background-color: rgb(25, 208, 221); /* Темнее при наведении */
+}
+
+/* Теперь добавляем стили для текста в main */
+main h2 {
+    color: blue;
+    text-align: center;
+}
+
+main p {
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 20px 30px; /* Отступы по бокам */
+    text-align: justify;
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Стили для рамки */
+.frame {
+    margin: 20px; /* Отступы вокруг рамки */
+    border: 2px solid #007BFF; /* Цвет рамки */
+    padding: 20px; /* Отступы внутри рамки */
+    border-radius: 10px; /* Скругление углов рамки */
+    background-color: rgba(173, 216, 230, 1); /* Цвет фона рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень под рамкой */
+}
+
+/* Стили для темной темы */
+body.dark-theme {
+    background-color: #121212; /* Цвет фона для темной темы */
+    color: #ffffff; /* Цвет текста для темной темы */
+}
+
+body.dark-theme .menu-item {
+    background-color: #1e1e1e; /* Цвет фона для кнопок в темной теме */
+    color: #ffffff; /* Цвет текста для кнопок в темной теме */
+}
+
+body.dark-theme .menu-item:hover {
+    background-color: #333; /* Цвет фона при наведении в темной теме */
+}
+
+body.dark-theme .login-button {
+    background-color: #1e1e1e; /* Цвет фона для кнопки Войти в темной теме */
+    color: #ffffff; /* Цвет текста для кнопки Войти в темной теме */
+}
+
+body.dark-theme .login-button:hover {
+    background-color: #333; /* Цвет фона кнопки Войти при наведении в темной теме */
+}
+
+body.dark-theme .frame {
+    background-color: #1e1e1e; /* Цвет фона рамки в темной теме */
+    border: 2px solid #007BFF; /* Цвет рамки в темной теме */
+}
+
