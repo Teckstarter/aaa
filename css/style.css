@@ -20,25 +20,6 @@ header {
     position: relative;
 }
 
-@font-face {
-    font-family: 'Ethnocentric';
-    src: url('http://192.168.1.173:5500/fonts/ethnocentric.woff2') format('woff2'),
-         url('http://192.168.1.173:5500/fonts/ethnocentric.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-h1 {
-    margin: 10px 0;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    flex-grow: 1;
-    font-size: 25px;
-    font-family: 'Ethnocentric', sans-serif;
-   
-}
-
-
 .underline {
     width: 100vw;
     height: 3px;
@@ -228,4 +209,14 @@ body.dark-theme .frame {
     background-color: #1e1e1e; /* Цвет фона рамки в темной теме */
     border: 2px solid #007BFF; /* Цвет рамки в темной теме */
 }
+
+.avatar img {
+    width: 100px; /* или нужный размер */
+    height: 100px; /* или нужный размер */
+    border-radius: 50%; /* Для круглой формы */
+    object-fit: cover; /* Обеспечивает правильное обрезание изображения */
+}
+
+
+
 
