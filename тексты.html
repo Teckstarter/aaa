@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - LinguoWay</title> <!-- Заголовок страницы -->
+    <title>Тексты - LinguoWay</title> <!-- Заголовок страницы -->
     <link rel="stylesheet" href="css/style.css"> <!-- Подключение файла стилей -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/your-project-id.css">
@@ -11,8 +11,13 @@
 <body>
     <header>
         <div class="header-container">
+            <div class="back-button">
+                <a href="index.html" id="back-link">
+                    <span>&lt;</span> <!-- Стрелка назад -->
+                </a>
+            </div>
             <div class="avatar">
-                <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Замена заголовка на изображение -->
+                <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Аватар -->
             </div>
             <div class="menu-icon" id="menu-button">
                 <div class="line"></div>
@@ -50,7 +55,7 @@
                 </button>
                 <button class="menu-item theme-toggle" id="theme-toggle">
                     <i class="fa fa-moon" id="theme-icon"></i>
-                    <span id="theme-text">Ночь</span> <!-- Текст кнопки -->
+                    <span id="theme-text">Ночь</span>
                 </button>
             </div>
             <div class="divider"></div> <!-- Разделительная линия -->
@@ -60,10 +65,10 @@
         </div>
     </header>
     <main>
-        <div class="frame">
-            <h2>Добро пожаловать в LinguoWay!</h2>
-            <p>Изучайте английский язык легко и интересно!</p>
-            <p>Используйте меню для навигации по сайту.</p>
+        <div class="content">
+            <h2>Тексты для изучения</h2>
+            <p>Здесь вы найдете различные тексты для практики чтения и изучения английского языка.</p>
+            <!-- Здесь можно добавить тексты или ссылки на тексты -->
         </div>
     </main>
     <script src="script.js"></script> <!-- Подключение JavaScript -->

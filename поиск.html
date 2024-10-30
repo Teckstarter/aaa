@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - LinguoWay</title> <!-- Заголовок страницы -->
+    <title>Поиск - LinguoWay</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Подключение файла стилей -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://use.typekit.net/your-project-id.css">
 </head>
 <body>
     <header>
         <div class="header-container">
+            <div class="back-button">
+                <a href="index.html" id="back-link">
+                    <span>&lt;</span> <!-- Стрелка назад -->
+                </a>
+            </div>
             <div class="avatar">
-                <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Замена заголовка на изображение -->
+                <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Аватар -->
             </div>
             <div class="menu-icon" id="menu-button">
                 <div class="line"></div>
@@ -50,7 +54,7 @@
                 </button>
                 <button class="menu-item theme-toggle" id="theme-toggle">
                     <i class="fa fa-moon" id="theme-icon"></i>
-                    <span id="theme-text">Ночь</span> <!-- Текст кнопки -->
+                    <span id="theme-text">Ночь</span>
                 </button>
             </div>
             <div class="divider"></div> <!-- Разделительная линия -->
@@ -60,12 +64,34 @@
         </div>
     </header>
     <main>
-        <div class="frame">
-            <h2>Добро пожаловать в LinguoWay!</h2>
-            <p>Изучайте английский язык легко и интересно!</p>
-            <p>Используйте меню для навигации по сайту.</p>
+        <h2></h2> <!-- место темы -->
+        <p></p> <!-- место текста -->
+        <div class="search-container">
+            <i class="fa fa-search search-icon"></i> <!-- Иконка лупы -->
+            <input type="text" placeholder="Введите ваш запрос" class="search-input" id="search-input">
+            <button class="clear-button" id="clear-button" style="display: none;">&times;</button> <!-- Кнопка X для очистки -->
         </div>
     </main>
     <script src="script.js"></script> <!-- Подключение JavaScript -->
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const clearButton = document.getElementById('clear-button');
+
+        // Показываем кнопку X при вводе текста
+        searchInput.addEventListener('input', function() {
+            if (searchInput.value.length > 0) {
+                clearButton.style.display = 'block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+        });
+
+        // Очищаем текстовое поле при нажатии на кнопку X
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            clearButton.style.display = 'none';
+            searchInput.focus();
+        });
+    </script>
 </body>
 </html>

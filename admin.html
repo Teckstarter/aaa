@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ Панель - LinguoWay</title>
+    <link rel="stylesheet" href="css/admin-style.css"> <!-- Подключение стилей для админ-панели -->
+</head>
+<body>
+    <header>
+        <h1>Админ Панель</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Добавить новый продукт</h2>
+            <form id="productForm">
+                <label for="productName">Название продукта:</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="productDescription">Описание продукта:</label>
+                <textarea id="productDescription" name="productDescription" required></textarea>
+
+                <label for="productImage">Изображение продукта:</label>
+                <input type="file" id="productImage" name="productImage" required>
+
+                <button type="submit">Добавить продукт</button>
+            </form>
+        </section>
+    </main>
+    <script src="admin-script.js"></script> <!-- Подключение скриптов для админской панели -->
+</body>
+</html>

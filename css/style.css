@@ -194,7 +194,7 @@ main h2 {
 main p {/* рамка */
     font-size: 13px;
     line-height: 1.9;
-    margin: 25px 30px; /* Отступы по бокам */
+    margin: 100px 30px; /* Отступы по бокам */
     text-align: justify;
 }
 
@@ -230,7 +230,70 @@ main p {/* рамка */
     z-index: -1; /* Ставим затемнение за текстом */
 }
 
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px; /* Размер стрелки */
+    font-weight: bold; /* Жирность стрелки */
+}
 
+.back-button a {
+    text-decoration: none;
+    color: black; /* Цвет стрелки */
+}
+
+.back-button span {
+    display: block;
+    width: 40px; /* Ширина кнопки */
+    height: 100%; /* Высота такая же, как у гамбургера */
+    line-height: 40px; /* Вертикальное выравнивание текста */
+    text-align: center; /* Центрирование стрелки */
+}
+
+.back-button a:hover span {
+    color: #333; /* Изменение цвета при наведении */
+}
+
+
+
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.search-icon {
+    color: #888;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.clear-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    color: #333;
+}
 
 /* Стили для темной темы */
 body.dark-theme {
@@ -256,6 +319,10 @@ body.dark-theme .line {
 
 body.dark-theme .menu  {
     background-color: #1e1e1e;
+}
+
+body.dark-theme .back-button a {  
+    color: rgb(255, 255, 255); /* Цвет стрелки */
 }
 
 body.dark-theme .menu-item {
@@ -295,4 +362,3 @@ body.dark-theme .frame {
     border-radius: 50%; /* Для круглой формы */
     object-fit: cover; /* Обеспечивает правильное обрезание изображения */
 }
-

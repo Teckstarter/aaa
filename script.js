@@ -49,4 +49,3 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         avatar.src = "fonts/lin.jpg"; // Меняем источник на аватар светлой темы
     }
 });
-
