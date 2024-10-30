@@ -260,27 +260,31 @@ main p {/* рамка */
 
 .search-container {
     position: relative;
-    max-width: 600px;
-    margin: 20px auto;
+    width: 80%; /* Ширина по процентам, 100% будет занимать всю ширину экрана */
+    margin: -220px auto 10px; /* Увеличим отступ сверху для поднятия контейнера */
     display: flex;
     align-items: center;
     border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 5px 10px;
+    border-radius: 30px; /* Сделаем края еще более круглыми */
+    padding: 5px 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Плавная смена стилей при смене темы */
 }
 
 .search-icon {
     color: #888;
     font-size: 24px;
-    margin-right: 10px;
+    margin-right: 15px; /* Уменьшаем отступ справа для более компактного дизайна */
 }
 
 .search-input {
-    width: 100%;
+    flex-grow: 1; /* Используем flex-grow, чтобы поле заполняло доступное пространство */
     border: none;
     outline: none;
     font-size: 18px;
     padding: 10px;
+    color: #000000; /* Текст черный в светлой теме */
+    background-color: transparent;
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
 }
 
 .clear-button {
@@ -289,10 +293,34 @@ main p {/* рамка */
     font-size: 24px;
     color: #888;
     cursor: pointer;
+    display: none; /* Изначально скрыта */
+    margin-left: 15px; /* Добавим отступ, чтобы не расширяло контейнер */
+    transition: color 0.3s ease;
 }
 
 .clear-button:hover {
     color: #333;
+}
+
+body.dark-theme .search-container {
+    border-color: #666; /* Цвет рамки в темной теме */
+}
+
+body.dark-theme .search-input {
+    color: #ffffff; /* Белый текст в темной теме */
+}
+
+body.dark-theme .clear-button {
+    color: #bbb;
+}
+
+body.dark-theme .clear-button:hover {
+    color: #fff;
+}
+
+/* Убираем расширение контейнера при появлении кнопки X */
+.search-container {
+    max-width: 100%; /* Чтобы контейнер оставался фиксированным при появлении X */
 }
 
 /* Стили для темной темы */
@@ -362,3 +390,4 @@ body.dark-theme .frame {
     border-radius: 50%; /* Для круглой формы */
     object-fit: cover; /* Обеспечивает правильное обрезание изображения */
 }
+
