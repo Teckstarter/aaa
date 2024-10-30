@@ -8,19 +8,20 @@ body {
 
 header {
     display: flex;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: px;
     padding: 0 px;
 }
 
 .header-container {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin-bottom: px; /* Отступ от аватарки до остальных элементов */
+    height: 86px ;
 }
 
 .avatar {
@@ -32,9 +33,8 @@ header {
     width: 100%;
     height: 2px;
     background-color: rgb(118, 118, 118);
-    margin-top: 4px;
+    margin-top: px;
     box-shadow: 0px 0px rgb(118, 118, 118);
-
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -48,6 +48,7 @@ header {
     margin-right: 30px; /* Устанавливаем отступ справа, чтобы изменить позицию */
     width: 35px;
     height: 30px;
+    background-color: rgb(255, 255, 255);
 }
 
 .line {
@@ -123,14 +124,25 @@ header {
 }
 
 .menu-item i {
-    margin-right: 20px;
+    margin-right: 22px; /* Увеличьте значение, если нужно больше отступа */
     color: rgb(0, 0, 0);
     flex-shrink: 0;
 }
 
+.menu-item a {
+    margin-right: 20px;
+    color: rgb(0, 0, 0);
+    flex-shrink: 0;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
 .menu-item span {
     flex-grow: 1;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+
+.menu-item:hover {
+    background-color: transparent; /* Убираем фоновый цвет при наведении */
 }
 
 .divider {
@@ -179,10 +191,10 @@ main h2 {
     text-align: center;
 }
 
-main p {
+main p {/* рамка */
     font-size: 13px;
     line-height: 1.9;
-    margin: 20px 30px; /* Отступы по бокам */
+    margin: 25px 30px; /* Отступы по бокам */
     text-align: justify;
 }
 
@@ -226,9 +238,37 @@ body.dark-theme {
     color: #ffffff; /* Цвет текста для темной темы */
 }
 
+body.dark-theme .header{
+    color: #ff0000; /* Цвет  */
+}
+
+body.dark-theme .header-container {
+    background-color: #121212;
+}
+
+body.dark-theme .menu-icon {
+    background-color:  #121212;
+}
+
+body.dark-theme .line {
+    background-color: rgb(255, 255, 255);
+}
+
+body.dark-theme .menu  {
+    background-color: #1e1e1e;
+}
+
 body.dark-theme .menu-item {
     background-color: #1e1e1e; /* Цвет фона для кнопок в темной теме */
     color: #ffffff; /* Цвет текста для кнопок в темной теме */
+}
+
+body.dark-theme .menu-item i {
+    color: #ffffff; /* Цвет текста для ссылок в темной теме */
+}
+
+body.dark-theme .menu-item a {
+    color: #ffffff; /* Цвет текста для ссылок в темной теме */
 }
 
 body.dark-theme .menu-item:hover {
@@ -236,17 +276,17 @@ body.dark-theme .menu-item:hover {
 }
 
 body.dark-theme .login-button {
-    background-color: #1e1e1e; /* Цвет фона для кнопки Войти в темной теме */
+    background-color: rgb(19, 96, 189); /* Цвет фона для кнопки Войти в темной теме */
     color: #ffffff; /* Цвет текста для кнопки Войти в темной теме */
 }
 
 body.dark-theme .login-button:hover {
-    background-color: #333; /* Цвет фона кнопки Войти при наведении в темной теме */
+    background-color: rgb(19, 96, 189); 
 }
 
 body.dark-theme .frame {
     background-color: #1e1e1e; /* Цвет фона рамки в темной теме */
-    border: 2px solid #007BFF; /* Цвет рамки в темной теме */
+    border: 2px solid #333; /* Цвет рамки в темной теме */
 }
 
 .avatar img {
