@@ -41,11 +41,12 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         themeIcon.classList.remove('fa-moon'); // Убираем иконку луны
         themeIcon.classList.add('fa-sun'); // Добавляем иконку солнца
         themeText.textContent = 'День'; // Изменяем текст на "Светлая тема"
+        avatar.src = "fonts/lin2.jpg"; // Меняем источник на аватар темной темы
     } else {
         themeIcon.classList.remove('fa-sun'); // Убираем иконку солнца
         themeIcon.classList.add('fa-moon'); // Добавляем иконку луны
         themeText.textContent = 'Ночь'; // Изменяем текст на "Темная тема"
-    }l
+        avatar.src = "fonts/lin.jpg"; // Меняем источник на аватар светлой темы
+    }
 });
-
 
