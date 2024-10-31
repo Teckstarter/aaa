@@ -90,39 +90,40 @@ header {
 }
 
 .menu {
-    display: none;
+    display: none; /* По умолчанию скрыто */
     flex-direction: column;
     position: absolute;
     top: 88px;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
     background-color: white;
     box-shadow: 0 1px 50px rgb(238, 238, 238);
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 1000; /* Убедитесь, что z-index достаточно высок */
     width: 100vw;
-    height: calc(100vh - 86px); /*было 100вх*/
+    height: calc(100vh - 86px); /* Высота меню */
     overflow-y: auto; /* Прокрутка по вертикали */
-} 
+}
 
 .menu-items {
     display: flex;
     flex-direction: column;
-}    
+}
 
 .menu-item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
+    padding: 16px 30px; /* Отступы для кнопок */
+    cursor: pointer; /* Курсор при наведении */
     text-align: left;
-    width: 100%;
+    width: 100%; /* Заполнение ширины контейнера */
     font-size: 18px;
-    transition: background-color 0.3s ease;
-    height: 50px; /* Фиксируем высоту */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+.menu-item:hover {
+    background-color: rgba(220, 220, 220, 0.518); /* Цвет фона при наведении */
 }
 
 .menu-item i { /* Значки кнопок */
@@ -131,30 +132,21 @@ header {
     flex-shrink: 0;
 }
 
+.menu-item a { /* Ссылки внутри кнопок */
+    color: inherit; /* Наследуем цвет текста от родителя */
+    text-decoration: none; /* Убираем подчеркивание */
+    width: 100%; /* Чтобы ссылка занимала всю ширину */
+}
 
-
-.menu-item a { /* Слова кнопок или текст */ 
-    margin-right: 20px;
-    color: rgb(0, 0, 0);
-    flex-shrink: 0;
-    text-decoration: none;
-} 
-
-
-.menu-item span { /*кнопка солнца текст*/
+.menu-item span { /* Текст кнопки для переключателя тем */
     flex-grow: 1;
     padding-left: 5px;
 }
+
 .menu-item:hover i,
-.menu-item:hover a,
-.menu-item:hover span    {
+.menu-item:hover span {
     color: rgb(111, 109, 109);    
 }
-
-.menu-item:hover {
-    background-color: rgb(255, 255, 255);
-}
-
 
 .divider {
     height: 1.3px;
@@ -162,14 +154,13 @@ header {
     margin: 10px auto;
     width: 84%;
     min-width: 50px;
-} 
-
+}
 
 .login-container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    padding-bottom: 20px; /* Добавляем отступ внизу */
+    padding-bottom: 20px; /* Отступ внизу */
 }
 
 .login-button {
@@ -181,28 +172,24 @@ header {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 30px; /* Округление */
     padding: 10px 20px;
-    width: 350px;
-    height: 48px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Скрытие выходящего содержимого */
+    width: 350px; /* Ширина кнопки */
+    height: 48px; /* Высота кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+.login-button:hover {
+    background-color: rgb(17, 85, 165); /* Цвет при наведении */
 }
 
 .login-button:active,
 .login-button:focus {
     background-color: rgb(17, 85, 165); /* Цвет при нажатии */
-    border: 1px solid rgb(255, 255, 255); /* Цвет границы */
     outline: none; /* Убираем стандартную рамку фокуса */
-    box-shadow: none; /* Убираем тень, если она есть */
+    box-shadow: none; /* Убираем тень */
 }
 
 
-
-.login-button:hover {
-    background-color: rgb(17, 85, 165);
-    border-radius: 30px;
-}
 
 main {
     display: flex;
@@ -432,7 +419,8 @@ body.dark-theme .menu  {
     background-color: #1e1e1e;
 }
 
-body.dark-theme .back-button a {  
+body.dark-theme .back-button a,
+body.dark-theme .back-button a:hover span {  
     color: rgb(255, 255, 255); /* Цвет стрелки */
 }
 

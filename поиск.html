@@ -16,8 +16,11 @@
                 </a>
             </div>
             <div class="avatar">
-                <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Аватар -->
+                <a href="index.html">
+                    <img id="avatar" src="fonts/lin.jpg" alt="Avatar"> <!-- Аватар -->
+                </a>
             </div>
+            
             <div class="menu-icon" id="menu-button">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -25,43 +28,35 @@
             </div>
         </div>
         <div class="underline"></div> <!-- Линия под заголовком -->
-        <div class="menu">
+        <div class="menu" id="menu">
             <div class="menu-items">
-                <button class="menu-item">
-                    <a href="поиск.html">
-                        <i class="fa fa-search"></i> Поиск
-                    </a>
-                </button>
-                <button class="menu-item">
-                    <a href="тексты.html">
-                        <i class="fa fa-book"></i> Тексты
-                    </a>
-                </button>
-                <button class="menu-item">
-                    <a href="грамматика.html">
-                        <i class="fa fa-pencil-alt"></i> Грамматика
-                    </a>
-                </button>
-                <button class="menu-item">
-                    <a href="тесты.html">
-                        <i class="fa fa-check"></i> Тесты
-                    </a>
-                </button>
-                <button class="menu-item">
-                    <a href="обновления.html">
-                        <i class="fa fa-bell"></i> Обновления
-                    </a>
-                </button>
-                <button class="menu-item theme-toggle" id="theme-toggle">
+                <div class="menu-item">
+                    <a href="поиск.html"><i class="fa fa-search"></i> Поиск</a>
+                </div>
+                <div class="menu-item">
+                    <a href="тексты.html"><i class="fa fa-book"></i> Тексты</a>
+                </div>
+                <div class="menu-item">
+                    <a href="грамматика.html"><i class="fa fa-pencil-alt"></i> Грамматика</a>
+                </div>
+                <div class="menu-item">
+                    <a href="тесты.html"><i class="fa fa-check"></i> Тесты</a>
+                </div>
+                <div class="menu-item">
+                    <a href="обновления.html"><i class="fa fa-bell"></i> Обновления</a>
+                </div>
+                <div class="menu-item theme-toggle" id="theme-toggle">
                     <i class="fa fa-moon" id="theme-icon"></i>
                     <span id="theme-text">Ночь</span>
-                </button>
+                </div>
             </div>
-            <div class="divider"></div> <!-- Разделительная линия -->
+            <div class="divider"></div>
+            <!-- Кнопка "Войти" -->
             <div class="login-container">
-                <button class="menu-item login-button">Войти</button> <!-- Кнопка Войти -->
+                <button class="menu-item login-button">Войти</button>
             </div>
         </div>
+        
     </header>
     <main>
         <h2></h2> <!-- место темы -->
