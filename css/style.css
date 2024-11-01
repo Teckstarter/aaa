@@ -145,10 +145,12 @@ header {
     padding-left: 5px;
 }
 
-.menu-item:hover i,
-.menu-item:hover span {
-    color: rgb(111, 109, 109);    
-}
+    .menu-item:hover i,
+    .menu-item:hover span {
+        color: rgb(111, 109, 109);    
+    }
+
+
 
 .divider {
     height: 1.3px;
@@ -304,7 +306,7 @@ main p {
 
 /* Медиа-запрос для планшетной и мобильной версии (максимальная ширина 1024px) */
 @media (max-width: 1024px) {
-    .header-login {
+    .header-login, .item1, .item2, .item3, .item4 {
         display: none; /* Скрываем кнопку на мобильных и планшетных версиях */
     }
 }
@@ -344,8 +346,66 @@ main p {
         width: 100px;
       
     }
+    /* Стили для меню */
+    .item1, .item2, .item3, .item4 {    display: block; /* Показываем кнопку */
+        position: absolute; /* Позволяет регулировать позицию */
+        left: 50%; /* Начинаем с правого края контейнера */
+        
+        top: 50%; /* Центрируем по вертикали */
+        transform: translateY(-50%); /* Корректировка для центрирования по вертикали*/
+        cursor: pointer;
+        width: 95px;
+        color: #000;
+        font-size: 18px;
+    }
+
+    .item4 {margin-left: -10px; /* Регулируем положение кнопки вправо */
+    }
+
+    .item4 {
+        border: 2px solid rgb(111, 109, 109); /* Цвет и толщина рамки */
+        padding: 5px; /* Отступы внутри рамки */
+        width: 18px;
+        border-radius: 8px;
+        align-items: center; /* Центрирует содержимое по вертикали */
+        justify-content: center; /* Центрирует содержимое по горизонтали */
+       }
+   
+
+
+    .item1 {margin-left: -375px; /* Регулируем положение кнопки вправо */
+    }
+
+    .item2 {margin-left: -280px; /* Регулируем положение кнопки вправо */
+    }
+
+    .item3 {margin-left: -180px; /* Регулируем положение кнопки вправо */
+    }
+
+   
+  
+    .item1 a, .item2 a, .item3 a {
+        display: flex; /* Делает текст и иконку в строку */
+        align-items: center; /* Выравнивание по вертикали */
+        color: inherit;
+        text-decoration: none; /* Убираем подчеркивание */
+    }
+    
+    .item1 i.fa-search, .item2 i, .item3 i {
+        margin-right: 6px; /* Регулируйте это значение для нужного расстояния */
+        color: inherit;
+    }
+
+    .item1:hover,  
+    .item2:hover,  
+    .item3:hover,
+    .item4:hover {
+        border-color: rgb(111, 109, 109); /* Цвет рамки при наведении */
+        color: rgb(111, 109, 109);
+    }
 
 }
+   
 
 
 .search-container {
@@ -470,8 +530,13 @@ body.dark-theme .menu  {
 }
 
 body.dark-theme .back-button a,
-body.dark-theme .back-button a:hover span {  
+body.dark-theme .back-button a:hover span,
+body.dark-theme .item1, 
+body.dark-theme .item2,
+body.dark-theme .item3,
+body.dark-theme .item4 {  
     color: rgb(255, 255, 255); /* Цвет стрелки */
+    border-color: rgb(255, 255, 255);
 }
 
 body.dark-theme .menu-item {
@@ -493,10 +558,17 @@ body.dark-theme .menu-item:hover {
 
 body.dark-theme .menu-item:hover i,
 body.dark-theme .menu-item:hover a,
-body.dark-theme .menu-item:hover span {
+body.dark-theme .menu-item:hover span,
+body.dark-theme .item1:hover, 
+body.dark-theme .item2:hover,
+body.dark-theme .item3:hover {
     color: rgb(111, 109, 109);
 }
 
+body.dark-theme .item4:hover {
+    border-color: rgb(111, 109, 109); /* Цвет рамки при наведении */
+    color: rgb(111, 109, 109);
+}
 
 body.dark-theme  .menu-item:hover i,
                 .menu-item:hover a,
@@ -525,5 +597,13 @@ body.dark-theme .frame {
     height: 77px; /* или нужный размер */
     border-radius: 50%; /* Для круглой формы */
     object-fit: cover; /* Обеспечивает правильное обрезание изображения */
-}
+    }
+
+
+
+
+
+
+
+
 
