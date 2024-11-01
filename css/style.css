@@ -24,6 +24,8 @@ header {
     height: 86px;
 }
 
+
+
 .avatar {
     display: none; /* Изначально скрыт */
 }
@@ -255,6 +257,10 @@ main p {
     }
 }
 
+ 
+
+
+
 .back-button {
     position: absolute;
     left: 20px;
@@ -296,6 +302,50 @@ main p {
     }
 }
 
+/* Медиа-запрос для планшетной и мобильной версии (максимальная ширина 1024px) */
+@media (max-width: 1024px) {
+    .header-login {
+        display: none; /* Скрываем кнопку на мобильных и планшетных версиях */
+    }
+}
+
+/* Медиа-запрос для десктопной версии */
+@media (min-width: 1025px)  {
+
+    .header-container {
+        display: flex;
+        justify-content: center; /* Центрируем содержимое */
+        align-items: center;
+        position: relative;
+    }
+
+    .avatar {
+        display: block;
+        position: absolute;
+        left: 50%; /* Ставим аватар по центру */
+        transform: translateX(-50%); /* Центрируем относительно левого края по горинзонту*/
+        margin-left: -430px; /* Отодвигаем левее (регулируемое значение) */
+
+    }
+
+        .header-login {
+        display: block; /* Показываем кнопку */
+        position: absolute; /* Позволяет регулировать позицию */
+        right: 50%; /* Начинаем с правого края контейнера */
+        margin-right: -490px; /* Регулируем положение кнопки вправо */
+        top: 50%; /* Центрируем по вертикали */
+        transform: translateY(-50%); /* Корректировка для центрирования по вертикали*/
+        background-color: rgb(19, 96, 189);
+        color: white;
+        border-radius: 30px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100px;
+      
+    }
+
+}
 
 
 .search-container {
@@ -476,3 +526,4 @@ body.dark-theme .frame {
     border-radius: 50%; /* Для круглой формы */
     object-fit: cover; /* Обеспечивает правильное обрезание изображения */
 }
+
